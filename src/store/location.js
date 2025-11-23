@@ -1,4 +1,4 @@
-const { create } = require("zustand");
+import { create } from "zustand";
 import { locations } from "#constants";
 import { immer } from "zustand/middleware/immer"
 
