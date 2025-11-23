@@ -10,17 +10,23 @@ const Contact = () => {
 				<WindowControls target="contact" />
 				<h2>Contact Me</h2>
 			</div>
-			<div className="p-5 space-y-5">
-				<img
-					src="/images/adrian.jpg"
-					alt="Roberto"
-					className="w-20 rounded-full"
-				/>
-				<h3>Let's Connect</h3>
-				<p>Got an idea? A bug to squash? Or just wanna talk tech? I'm in.</p>
-				<p>
-					<a href="mailto:contact@robtome.com">contact@robtome.com</a>
-				</p>
+			<div className="p-5 space-y-10">
+				<div className="flex gap-5">
+					<img
+						src="/images/adrian.jpg"
+						alt="Roberto"
+						className="w-30 rounded-full"
+					/>
+					<div>
+						<h3 className="mb-5">Let's Connect!</h3>
+						<p className="mb-2">
+							Got an idea? A bug to squash? Or just wanna talk tech? I'm in.
+						</p>
+						<p>
+							<a href="mailto:contact@robtome.com">contact@robtome.com</a>
+						</p>
+					</div>
+				</div>
 				<ul>
 					{socials.map(({ id, text, icon, bg, link }) => (
 						<li key={id} style={{ backgroundColor: bg }}>
