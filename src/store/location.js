@@ -11,7 +11,7 @@ const useLocationStore = create(immer((set) => ({
         state.activeLocation = location;
     }),
 
-    resetActiveLocation: () => set(() => {
+    resetActiveLocation: () => set((state) => {
         state.activeLocation = DEFAULT_LOCATION;
     })
 })));
