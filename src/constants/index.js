@@ -445,10 +445,11 @@ const RESUME_LOCATION = {
     children: [
         {
             id: 1,
-            name: "Resume.pdf",
+            name: "roberto-tome-cv.pdf",
             icon: "/images/pdf.png",
             kind: "file",
             fileType: "pdf",
+            position: "top-10 left-10",
             // you can add `href` if you want to open a hosted resume
             // href: "/your/resume/path.pdf",
         },
