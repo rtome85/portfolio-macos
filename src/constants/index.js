@@ -49,12 +49,6 @@ const dockApps = [
         canOpen: true,
     },
     {
-        id: "photos",
-        name: "Gallery", // was "Photos"
-        icon: "photos.png",
-        canOpen: true,
-    },
-    {
         id: "contact",
         name: "Contact", // or "Get in touch"
         icon: "contact.png",
@@ -71,6 +65,33 @@ const dockApps = [
         name: "Archive", // was "Trash"
         icon: "trash.png",
         canOpen: false,
+    },
+];
+
+const mobileDockApps = [
+    {
+        id: "projects",
+        name: "Projects", // was "Finder"
+        icon: "folder.png",
+        canOpen: true,
+    },
+    {
+        id: "safari",
+        name: "Articles", // was "Safari"
+        icon: "safari.png",
+        canOpen: true,
+    },
+    {
+        id: "contact",
+        name: "Contact", // or "Get in touch"
+        icon: "contact.png",
+        canOpen: true,
+    },
+    {
+        id: "terminal",
+        name: "Skills", // was "Terminal"
+        icon: "terminal.png",
+        canOpen: true,
     },
 ];
 
@@ -213,6 +234,7 @@ export {
     socials,
     photosLinks,
     gallery,
+    mobileDockApps
 };
 
 const WORK_LOCATION = {

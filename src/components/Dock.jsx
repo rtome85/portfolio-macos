@@ -1,13 +1,20 @@
-import { dockApps } from "#constants";
+import { SearchMobile } from "#components";
+import { dockApps, mobileDockApps } from "#constants";
+import useMediaQuery from "#hooks/useMediaQuery";
 import useWindowStore from "#store/window";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import React, { useRef } from "react";
+import React, { useMemo, useRef } from "react";
 import { Tooltip } from "react-tooltip";
 
 const Dock = () => {
 	const { openWindow, closeWindow, windows } = useWindowStore();
 	const dockRef = useRef(null);
+	const isMobile = useMediaQuery("(max-width: 639px)");
+	const apps = useMemo(
+		() => (isMobile ? mobileDockApps : dockApps),
+		[isMobile]
+	);
 
 	const toggleApp = (app) => {
 		if (!app.canOpen) return;
@@ -21,54 +28,60 @@ const Dock = () => {
 		}
 	};
 
-	useGSAP(() => {
-		const dock = dockRef.current;
-		if (!dock) return;
+	useGSAP(
+		() => {
+			if (isMobile) return;
 
-		const icons = dock.querySelectorAll(".dock-icon");
+			const dock = dockRef.current;
+			if (!dock) return;
 
-		const animateIcons = (mouseX) => {
-			const { left } = dock.getBoundingClientRect();
+			const icons = dock.querySelectorAll(".dock-icon");
 
-			icons.forEach((icon) => {
-				const { left: iconLeft, width } = icon.getBoundingClientRect();
-				const center = iconLeft - left + width / 2;
-				const distance = Math.abs(mouseX - center);
-				const intensity = Math.exp(-(distance ** 2.5) / 2000);
+			const animateIcons = (mouseX) => {
+				const { left } = dock.getBoundingClientRect();
 
-				gsap.to(icon, {
-					scale: 1 + 0.25 * intensity,
-					y: -15 * intensity,
-					duration: 0.2,
-					ease: "power1.out",
+				icons.forEach((icon) => {
+					const { left: iconLeft, width } = icon.getBoundingClientRect();
+					const center = iconLeft - left + width / 2;
+					const distance = Math.abs(mouseX - center);
+					const intensity = Math.exp(-(distance ** 2.5) / 2000);
+
+					gsap.to(icon, {
+						scale: 1 + 0.25 * intensity,
+						y: -15 * intensity,
+						duration: 0.2,
+						ease: "power1.out",
+					});
 				});
-			});
-		};
+			};
 
-		const handleMouseMove = (e) => {
-			const { left } = dock.getBoundingClientRect();
+			const handleMouseMove = (e) => {
+				const { left } = dock.getBoundingClientRect();
 
-			animateIcons(e.clientX - left);
-		};
+				animateIcons(e.clientX - left);
+			};
 
-		const resetIcons = () =>
-			icons.forEach((icon) =>
-				gsap.to(icon, {
-					scale: 1,
-					y: 0,
-					duration: 0.3,
-					ease: "power1.out",
-				})
-			);
+			const resetIcons = () =>
+				icons.forEach((icon) =>
+					gsap.to(icon, {
+						scale: 1,
+						y: 0,
+						duration: 0.3,
+						ease: "power1.out",
+					})
+				);
 
-		dock.addEventListener("mousemove", handleMouseMove);
-		dock.addEventListener("mouseleave", resetIcons);
-	});
+			dock.addEventListener("mousemove", handleMouseMove);
+			dock.addEventListener("mouseleave", resetIcons);
+		},
+		{ dependencies: [isMobile], scope: dockRef }
+	);
 
 	return (
 		<section id="dock">
+			{isMobile && <SearchMobile />}
 			<div ref={dockRef} className="dock-container">
-				{dockApps.map(({ id, name, icon, canOpen }) => (
+				{apps.map(({ id, name, icon, canOpen }) => (
 					<div key={id} className="relative flex justify-center">
 						<button
 							type="button"
