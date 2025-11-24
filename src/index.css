@@ -67,7 +67,7 @@ body {
 	}
 
 	#welcome {
-		@apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
+		@apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:hidden max-sm:w-full max-sm:px-10;
 
 		.small-screen {
 			@apply sm:hidden m-7 bg-red-300/20 backdrop-blur-lg p-3 rounded-md absolute top-10;
@@ -79,10 +79,10 @@ body {
 	}
 
 	#dock {
-		@apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none max-sm:hidden;
+		@apply absolute bottom-5 left-1/2 -translate-x-1/2 z-5000 select-none max-sm:w-[97%] max-sm:bottom-2 max-sm:z-10;
 
 		.dock-container {
-			@apply bg-white/20 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-1.5;
+			@apply bg-white/20 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-1.5 max-sm:rounded-4xl max-sm:justify-center max-sm:gap-5 max-sm:p-2;
 		}
 
 		.tooltip {
@@ -90,7 +90,7 @@ body {
 		}
 
 		.dock-icon {
-			@apply size-14 3xl:size-20 cursor-pointer;
+			@apply size-14 3xl:size-20 cursor-pointer max-sm:size-18;
 
 			img {
 				@apply object-cover object-center;
@@ -392,5 +392,9 @@ body {
 				}
 			}
 		}
+	}
+
+	#search {
+		@apply bg-white/20 backdrop-blur-md p-2 mb-3 rounded-4xl w-auto flex justify-center gap-1 max-w-28 mx-auto;
 	}
 }
