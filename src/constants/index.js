@@ -76,7 +76,7 @@ const mobileDockApps = [
         canOpen: true,
     },
     {
-        id: "safari",
+        id: "safariMobile",
         name: "Articles", // was "Safari"
         icon: "safari.png",
         canOpen: true,
@@ -589,6 +589,7 @@ const WINDOW_CONFIG = {
     imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     terminalMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     filesMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    safariMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
