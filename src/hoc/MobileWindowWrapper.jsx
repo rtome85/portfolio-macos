@@ -6,7 +6,7 @@ import React, { useLayoutEffect, useRef } from "react";
 const MobileWindowWrapper = (Component, windowKey) => {
 	const Wrapped = (props) => {
 		const { focusWindow, windows, closeWindow } = useWindowStore();
-		const { isOpen, zIndex } = windows[windowKey];
+		const { isOpen = false, zIndex = 0 } = windows[windowKey] || {};
 		const ref = useRef(null);
 
 		useLayoutEffect(() => {
