@@ -7,5 +7,6 @@ import Image from "./Image";
 import Contact from "./Contact";
 import TerminalMobile from "./TerminalMobile";
 import FilesMobile from "./FilesMobile";
+import SafariMobile from "./SafariMobile";
 
-export { Terminal, Safari, Resume, Finder, Text, Image, Contact, TerminalMobile, FilesMobile }
+export { Terminal, Safari, Resume, Finder, Text, Image, Contact, TerminalMobile, FilesMobile, SafariMobile }
