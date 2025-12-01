@@ -95,6 +95,63 @@ const mobileDockApps = [
     },
 ];
 
+const homeMobileApps = [
+    {
+        id: "notes",
+        name: "Resume",
+        icon: "/apps/notes.svg",
+        canOpen: true,
+    },
+    {
+        id: "linkedin",
+        name: "LinkedIn",
+        icon: "/apps/linkedin.svg",
+        canOpen: true,
+    },
+    {
+        id: "mail",
+        name: "Mail",
+        icon: "/apps/mail.svg",
+        canOpen: true,
+    },
+    {
+        id: "teams",
+        name: "Teams",
+        icon: "/apps/teams.svg",
+        canOpen: true,
+    },
+    {
+        id: "filesMobile",
+        name: "Projects",
+        icon: "/apps/files.svg",
+        canOpen: true,
+    },
+    {
+        id: "github",
+        name: "Github",
+        icon: "/apps/github.svg",
+        canOpen: true,
+    },
+    {
+        id: "settings",
+        name: "Settings",
+        icon: "/apps/settings.svg",
+        canOpen: true,
+    },
+    {
+        id: "about",
+        name: "About Me",
+        icon: "/apps/about.svg",
+        canOpen: true,
+    },
+    {
+        id: "blog",
+        name: "Blog",
+        icon: "/apps/blog.svg",
+        canOpen: true,
+    },
+];
+
 const blogPosts = [
     {
         id: 1,
@@ -235,7 +292,8 @@ export {
     socials,
     photosLinks,
     gallery,
-    mobileDockApps
+    mobileDockApps,
+    homeMobileApps,
 };
 
 const WORK_LOCATION = {

@@ -57,7 +57,7 @@ const FilesMobile = () => {
 			<footer className="absolute bottom-0 left-0 right-0 flex items-center justify-center gap-40 p-4 border-t border-gray-200">
 				<div className="flex flex-col items-center gap-2">
 					<img src="/icons/browse.svg" alt="Cancel" />
-					<p className="text-gray-400 text-sm">Browse</p>
+					<p className="text-[#007BFE] text-sm">Browse</p>
 				</div>
 				<div className="flex flex-col items-center gap-2">
 					<img src="/icons/recent.svg" alt="Recent" />

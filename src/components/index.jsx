@@ -6,6 +6,7 @@ import Home from "./Home";
 import SearchMobile from "./Search";
 import MobileControls from "./MobileControls";
 import TabBar from "./TabBar";
+import HomeMobile from "./HomeMobile";
 
 export {
 	Navbar,
@@ -16,4 +17,5 @@ export {
 	SearchMobile,
 	MobileControls,
 	TabBar,
+	HomeMobile,
 };

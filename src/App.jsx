@@ -1,5 +1,5 @@
 import React from "react";
-import { Dock, Home, Navbar, Welcome } from "#components";
+import { Dock, Home, HomeMobile, Navbar, Welcome } from "#components";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 import {
@@ -33,6 +33,7 @@ const App = () => {
 			<Contact />
 
 			<Home />
+			<HomeMobile />
 		</main>
 	);
 };
