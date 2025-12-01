@@ -98,7 +98,7 @@ const MobileWindowWrapper = (Component, windowKey) => {
 			} else {
 				el.style.display = "none";
 			}
-		}, [isOpen]);
+		}, [isOpen, closeWindow, windowKey]);
 
 		return (
 			<section id={windowKey} ref={ref} style={{ zIndex }} className="absolute">
