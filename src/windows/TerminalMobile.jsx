@@ -3,8 +3,6 @@ import { MobileControls, WindowControls } from "#components";
 import { techStack } from "#constants";
 import MobileWindowWrapper from "#hoc/MobileWindowWrapper";
 import { Check, Flag } from "lucide-react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 
 const TerminalMobile = () => {
 	return (
