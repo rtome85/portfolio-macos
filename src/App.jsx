@@ -10,6 +10,7 @@ import {
 	Text,
 	Image,
 	Contact,
+	TerminalMobile,
 } from "#windows";
 gsap.registerPlugin(Draggable);
 
@@ -21,6 +22,7 @@ const App = () => {
 			<Dock />
 
 			<Terminal />
+			<TerminalMobile />
 			<Safari />
 			<Resume />
 			<Finder />

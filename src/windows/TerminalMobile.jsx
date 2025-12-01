@@ -1,21 +1,19 @@
-import { WindowControls } from "#components";
-import { techStack } from "#constants";
-import WindowWrapper from "#hoc/WindowWrapper";
-import { Check, Flag } from "lucide-react";
 import React from "react";
+import { MobileControls, WindowControls } from "#components";
+import { techStack } from "#constants";
+import MobileWindowWrapper from "#hoc/MobileWindowWrapper";
+import { Check, Flag } from "lucide-react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
-const Terminal = () => {
+const TerminalMobile = () => {
 	return (
 		<>
-			<div id="window-header">
-				<WindowControls target="terminal" />
-				<h2>Tech Stack</h2>
+			<div id="mobile-header">
+				<MobileControls target="terminalMobile" />
+				<h2 className="text-lg">Tech Stack</h2>
 			</div>
 			<div className="techstack">
-				<p>
-					<span className="font-bold">@roberto % </span>
-					show tech stack
-				</p>
 				<div className="label">
 					<p className="w-32">Category</p>
 					<p>Technologies</p>
@@ -50,6 +48,10 @@ const Terminal = () => {
 		</>
 	);
 };
-const TerminalWindow = WindowWrapper(Terminal, "terminal");
 
-export default TerminalWindow;
+const TerminalMobileWindow = MobileWindowWrapper(
+	TerminalMobile,
+	"terminalMobile"
+);
+
+export default TerminalMobileWindow;
