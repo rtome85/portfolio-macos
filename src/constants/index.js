@@ -70,8 +70,8 @@ const dockApps = [
 
 const mobileDockApps = [
     {
-        id: "projects",
-        name: "Projects", // was "Finder"
+        id: "filesMobile",
+        name: "Files", // was "Finder"
         icon: "folder.png",
         canOpen: true,
     },
@@ -244,6 +244,7 @@ const WORK_LOCATION = {
     name: "Work",
     icon: "/icons/work.svg",
     kind: "folder",
+    type: "work",
     children: [
         // ▶ Project 1
         {
@@ -253,6 +254,7 @@ const WORK_LOCATION = {
             kind: "folder",
             position: "top-10 left-5", // icon position inside Finder
             windowPosition: "top-[5vh] left-5", // optional: Finder window position
+            type: "project",
             children: [
                 {
                     id: 1,
@@ -306,6 +308,7 @@ const WORK_LOCATION = {
             kind: "folder",
             position: "top-52 right-80",
             windowPosition: "top-[20vh] left-7",
+            type: "project",
             children: [
                 {
                     id: 1,
@@ -359,6 +362,7 @@ const WORK_LOCATION = {
             kind: "folder",
             position: "top-10 left-80",
             windowPosition: "top-[33vh] left-7",
+            type: "project",
             children: [
                 {
                     id: 1,
@@ -526,6 +530,7 @@ const WINDOW_CONFIG = {
     txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     terminalMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    filesMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

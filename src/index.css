@@ -212,6 +212,14 @@ body {
 		}
 	}
 
+	#filesMobile {
+		@apply max-sm:w-dvw max-sm:h-dvh absolute max-sm:top-0 max-sm:left-0 bg-white;
+
+		.content {
+			@apply px-4;
+		}
+	}
+
 	#terminalMobile {
 		@apply max-sm:w-dvw max-sm:h-dvh absolute max-sm:top-0 max-sm:left-0 bg-white;
 
