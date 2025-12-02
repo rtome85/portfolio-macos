@@ -1,14 +1,14 @@
 import React from "react";
-import { WindowControls } from "#components";
-import WindowWrapper from "#hoc/WindowWrapper";
+import MobileWindowWrapper from "#hoc/MobileWindowWrapper";
+import { MobileControls } from "#components";
 import { socials } from "#constants";
 
-const Contact = () => {
+const ContactMobile = () => {
 	return (
 		<>
-			<div id="window-header">
-				<WindowControls target="contact" />
-				<h2>Contact Me</h2>
+			<div id="mobile-header">
+				<MobileControls target="contactMobile" />
+				<h2 className="text-lg font-bold text-center">Contact</h2>
 			</div>
 			<div className="p-5 space-y-10">
 				<div className="flex gap-5">
@@ -39,6 +39,6 @@ const Contact = () => {
 	);
 };
 
-const ContactWindow = WindowWrapper(Contact, "contact");
+const ContactMobileWindow = MobileWindowWrapper(ContactMobile, "contactMobile");
 
-export default ContactWindow;
+export default ContactMobileWindow;
