@@ -221,7 +221,7 @@ body {
 	}
 
 	#home-mobile {
-		@apply max-sm:w-dvw max-sm:h-dvh max-sm:top-0 max-sm:left-0 px-8 py-8;
+		@apply hidden max-sm:block max-sm:w-dvw max-sm:h-dvh max-sm:top-0 max-sm:left-0 px-8 py-8;
 	}
 
 	#safariMobile {
@@ -339,6 +339,42 @@ body {
 					@apply font-semibold text-sm text-white;
 				}
 			}
+		}
+	}
+
+	#contactMobile {
+		@apply max-sm:w-dvw max-sm:h-dvh absolute max-sm:top-0 max-sm:left-0 bg-white;
+
+		h2 {
+			@apply font-bold text-sm text-center w-full;
+		}
+
+		h3 {
+			@apply text-xl font-semibold;
+		}
+
+		ul {
+			@apply flex flex-col items-center gap-3;
+
+			li {
+				@apply rounded-lg flex justify-start px-3 py-4 w-full hover:-translate-y-0.5 hover:scale-105 origin-center transition-all duration-300;
+
+				a {
+					@apply flex items-center justify-center gap-3 w-full;
+				}
+
+				p {
+					@apply font-semibold text-sm text-white;
+				}
+			}
+		}
+	}
+
+	.contact {
+		@apply p-5;
+
+		h2 {
+			@apply text-xl font-semibold;
 		}
 	}
 

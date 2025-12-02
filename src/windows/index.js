@@ -8,5 +8,6 @@ import Contact from "./Contact";
 import TerminalMobile from "./TerminalMobile";
 import FilesMobile from "./FilesMobile";
 import SafariMobile from "./SafariMobile";
+import ContactMobile from "./ContactMobile";
 
-export { Terminal, Safari, Resume, Finder, Text, Image, Contact, TerminalMobile, FilesMobile, SafariMobile }
+export { Terminal, Safari, Resume, Finder, Text, Image, Contact, TerminalMobile, FilesMobile, SafariMobile, ContactMobile }

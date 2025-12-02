@@ -82,7 +82,7 @@ const mobileDockApps = [
         canOpen: true,
     },
     {
-        id: "contact",
+        id: "contactMobile",
         name: "Contact", // or "Get in touch"
         icon: "contact.png",
         canOpen: true,
@@ -211,28 +211,21 @@ const socials = [
         text: "Github",
         icon: "/icons/github.svg",
         bg: "#f4656b",
-        link: "https://github.com/JavaScript-Mastery-Pro",
+        link: "https://github.com/rtome85",
     },
     {
         id: 2,
-        text: "Platform",
+        text: "E-mail",
         icon: "/icons/atom.svg",
         bg: "#4bcb63",
-        link: "https://jsmastery.com/",
+        link: "mailto:contact@robtome.com",
     },
     {
         id: 3,
-        text: "Twitter/X",
-        icon: "/icons/twitter.svg",
-        bg: "#ff866b",
-        link: "https://x.com/jsmasterypro",
-    },
-    {
-        id: 4,
         text: "LinkedIn",
         icon: "/icons/linkedin.svg",
         bg: "#05b6f6",
-        link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+        link: "https://www.linkedin.com/in/robtome/",
     },
 ];
 
@@ -590,6 +583,7 @@ const WINDOW_CONFIG = {
     terminalMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     filesMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     safariMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    contactMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
