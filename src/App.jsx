@@ -15,6 +15,7 @@ import {
 	SafariMobile,
 	ContactMobile,
 	AboutMobile,
+	ResumeMobile,
 } from "#windows";
 
 gsap.registerPlugin(Draggable);
@@ -38,6 +39,7 @@ const App = () => {
 			<AboutMobile />
 			<SafariMobile />
 			<ContactMobile />
+			<ResumeMobile />
 			<Home />
 			<HomeMobile />
 		</main>

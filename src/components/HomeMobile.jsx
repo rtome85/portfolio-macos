@@ -23,6 +23,7 @@ const HomeMobile = () => {
 		if (app.id === "aboutMobile") return openWindow("aboutMobile");
 		if (app.id === "blog")
 			return window.open("https://robtome.com/blog", "_blank");
+		if (app.id === "resumeMobile") return openWindow("resumeMobile");
 	};
 
 	return (
