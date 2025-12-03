@@ -139,7 +139,7 @@ const homeMobileApps = [
         canOpen: true,
     },
     {
-        id: "about",
+        id: "aboutMobile",
         name: "About Me",
         icon: "/apps/about.svg",
         canOpen: true,
@@ -180,7 +180,7 @@ const blogPosts = [
 const techStack = [
     {
         category: "Frontend",
-        items: ["React.js", "Next.js", "TypeScript"],
+        items: ["React.js", "Next.js", "TypeScript", "TanStack Start"],
     },
     {
         category: "Mobile",
@@ -188,21 +188,68 @@ const techStack = [
     },
     {
         category: "Styling",
-        items: ["Tailwind CSS", "Sass", "CSS"],
+        items: ["Tailwind CSS", "CSS"],
     },
     {
         category: "Backend",
-        items: ["Node.js", "Express", "NestJS", "Hono"],
+        items: ["Node.js", "Express", "Spring Boot", "RESTful APIs"],
+    },
+    {
+        category: "State Management",
+        items: ["Zustand", "TanStack Query"],
+    },
+    {
+        category: "UI/UX",
+        items: ["Figma", "Responsive Design"],
     },
     {
         category: "Database",
-        items: ["MongoDB", "PostgreSQL"],
+        items: ["MongoDB", "PostgreSQL", "MySQL"],
     },
     {
         category: "Dev Tools",
-        items: ["Git", "GitHub", "Docker"],
+        items: ["Git", "GitHub", "Docker", "CI/CD"],
+    },
+    {
+        category: "Testing",
+        items: ["Jest", "React Testing Library"],
+    },
+    {
+        category: "Code Quality",
+        items: ["ESLint", "Prettier"],
+    },
+    {
+        category: "AI Tools",
+        items: ["Cursor", "Ollama", "Claude Code", "n8n"],
     },
 
+];
+
+const certifications = [
+    {
+        name: "The Frontend Developer Career Path",
+        organization: "Scrimba",
+        date: "2025",
+        hours: 81.6,
+        icon: "/icons/scrimba.webp",
+        certificate: "/files/the-frontend-developer-career-path-cert.pdf",
+    },
+    {
+        name: "Learn TypeScript",
+        organization: "Scrimba",
+        date: "2025",
+        hours: 4.2,
+        icon: "/icons/scrimba.webp",
+        certificate: "/files/typescript-cert.pdf",
+    },
+    {
+        name: "Learn React",
+        organization: "Scrimba",
+        date: "2022",
+        hours: 15.1,
+        icon: "/icons/scrimba.webp",
+        certificate: "/react-cert.pdf",
+    },
 ];
 
 const socials = [
@@ -282,6 +329,7 @@ export {
     dockApps,
     blogPosts,
     techStack,
+    certifications,
     socials,
     photosLinks,
     gallery,
@@ -584,6 +632,93 @@ const WINDOW_CONFIG = {
     filesMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     safariMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     contactMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    aboutMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
+
+export const WORK_EXPERIENCE = [
+    {
+        id: 1,
+        logo: "/icons/peoplewhothink.png",
+        company: "People Who Think",
+        position: "Lead Software Engineer",
+        date: "Apr 2024 - Present",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+        achievements: [
+            "Designed and delivered a full React Native mobile app (beta on iOS & Android) from Figma prototypes, ensuring high accessibility and performance.",
+            "Built a reusable component library, cutting new‑screen implementation time by ~25%.",
+            "Implemented client‑side authentication and Zustand state management, improving code maintainability.",
+            "Added Jest test coverage, reducing regressions and stabilizing releases.",
+        ],
+    },
+    {
+        id: 2,
+        logo: "/icons/minsait.png",
+        company: "Minsait",
+        position: "Technical Team Lead",
+        date: "Feb 2024 - Apr 2025",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+        achievements: [
+            "Led migration of legacy Spring MVC/JSP UI to React + TypeScript, creating 25+ new components and replacing ~40% of legacy pages.",
+            "Established frontend architecture with React Router v6, custom hooks, and shared UI patterns, achieving ~20% faster page loads.",
+            "Enhanced TypeScript strictness, ESLint/Prettier rules, and Jest testing workflow, raising code quality by ~15%.",
+            "Mentored junior developers, accelerating onboarding and code‑review cycles.",
+        ],
+    },
+    {
+        id: 3,
+        logo: "/icons/minsait.png",
+        company: "Minsait",
+        position: "Frontend Engineer",
+        date: "Feb 2023 - Feb 2024",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+        achievements: [
+            "Converted JSP UI elements into reusable React + TypeScript components, reducing duplicated frontend logic by ~30%.",
+            "Collaborated with backend teams to validate API contracts, lowering frontend defects by ~10% early in sprints.",
+            "Wrote 15+ unit tests using Jest & React Testing Library, reinforcing reliability of new UI modules.",
+        ],
+    },
+    {
+        id: 4,
+        logo: "/icons/minsait.png",
+        company: "Minsait",
+        position: "Systems Engineer",
+        date: "Feb 2022 - Jan 2023",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+        achievements: [
+            "Served as the webMethods platform administrator, ensuring optimal performance, availability, and security.",
+            "Monitored and maintained the integration platform, proactively identifying and resolving issues to minimize downtime.",
+            "Optimized system performance through troubleshooting, patching, and upgrades, ensuring seamless operation of critical processes.",
+            "Worked closely with development and infrastructure teams to enhance platform reliability and scalability.",
+        ],
+    },
+    {
+        id: 5,
+        logo: "/icons/indra.png",
+        company: "Indra",
+        position: "Systems Engineer",
+        date: "Jan 2018 - Feb 2022",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+        achievements: [
+            "Spearheaded the maintenance and optimization of financial terminals for Banc Sabadell, ensuring system stability and performance.",
+            "Applied advanced Java and VB skills to resolve complex technical issues and implement system enhancements.",
+            "Played a key role in debugging, troubleshooting, and improving legacy systems, significantly reducing downtime and improving user experience.",
+            "Collaborated with a cross-functional team, leveraging GitHub for version control and efficient code management across projects.",
+            "Provided proactive technical support, continuously identifying areas for improvement and delivering impactful solutions to enhance system functionality.",
+        ],
+    },
+    {
+        id: 6,
+        logo: "/icons/tecnocom.png",
+        company: "Tecnocom",
+        position: "Junior Systems Engineer",
+        date: "Mar 2016 - Dec 2017",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+        achievements: [
+            "Provided technical support and maintenance for financial terminals at Banc Sabadell, ensuring system reliability and performance.",
+            "Developed and maintained applications using Java and VB, contributing to system enhancements and issue resolution.",
+            "Collaborated with cross-functional teams and leveraged GitHub for version control and code management.",
+        ],
+    },
+];
