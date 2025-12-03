@@ -82,7 +82,7 @@ const ResumeMobile = () => {
 				{/* Core Skills */}
 				<div className="flex flex-col gap-2">
 					<h2 className="text-xl font-bold">Core Skills</h2>
-					<ul className="fle flex-col gap-2 list-disc list-inside">
+					<ul className="flex flex-col gap-2 list-disc list-inside">
 						{techStack.map((skill) => (
 							<li key={skill.category}>{skill.items.join(", ")}</li>
 						))}
