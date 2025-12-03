@@ -19,14 +19,12 @@ const TerminalMobile = () => {
 
 				<ul className="content">
 					{techStack.map(({ category, items }) => (
-						<li key={category} className="flex items-center">
+						<li key={category} className="flex items-start">
 							<Check className="check" size={20} />
-							<h3>{category}</h3>
-							<ul>
+							<h3 className="font-semibold">{category}</h3>
+							<ul className=" flex flex-col items-start">
 								{items.map((item, i) => (
-									<li key={i}>
-										{item} {i < items.length - 1 ? "|" : ""}{" "}
-									</li>
+									<li key={i}>{item}</li>
 								))}
 							</ul>
 						</li>
@@ -35,7 +33,8 @@ const TerminalMobile = () => {
 
 				<div className="footnote">
 					<p>
-						<Check size={20} /> 6 of 6 stacks loaded successfully (100%)
+						<Check size={20} />
+						{`${techStack.length} of ${techStack.length} stacks loaded successfully (100%)`}
 					</p>
 					<p className="text-black">
 						<Flag size={15} fill="black" />

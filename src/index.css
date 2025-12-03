@@ -167,7 +167,7 @@ body {
 	}
 
 	#terminal {
-		@apply w-xl max-sm:w-dvw max-sm:h-dvh absolute max-sm:top-0 max-sm:left-0 top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+		@apply w-2xl max-sm:w-dvw max-sm:h-dvh absolute max-sm:top-0 max-sm:left-0 top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
 		h2 {
 			@apply font-bold text-sm text-center w-full;
@@ -185,7 +185,7 @@ body {
 
 				li {
 					.check {
-						@apply text-[#00A154] w-5;
+						@apply text-[#00A154] w-5 mb-2;
 					}
 
 					h3 {
@@ -276,7 +276,8 @@ body {
 		}
 
 		.techstack {
-			@apply text-sm font-roboto p-5;
+			@apply text-sm font-roboto p-5 overflow-y-auto pb-24;
+			max-height: calc(100dvh - 100px);
 
 			.label {
 				@apply flex items-center ms-10 mt-7;
@@ -295,7 +296,7 @@ body {
 					}
 
 					ul {
-						@apply flex items-center gap-3;
+						@apply flex items-center mb-2;
 					}
 				}
 			}
@@ -370,10 +371,19 @@ body {
 		}
 	}
 
-	.contact {
-		@apply p-5;
+	#aboutMobile {
+		@apply max-sm:w-dvw max-sm:h-dvh absolute max-sm:top-0 max-sm:left-0 bg-white;
 
-		h2 {
+		.content {
+			@apply p-5 space-y-1 overflow-y-auto pb-24;
+			max-height: calc(100dvh - 100px);
+
+			img {
+				@apply w-30 rounded-full;
+			}
+		}
+
+		h3 {
 			@apply text-xl font-semibold;
 		}
 	}
