@@ -97,7 +97,7 @@ const mobileDockApps = [
 
 const homeMobileApps = [
     {
-        id: "notes",
+        id: "resumeMobile",
         name: "Resume",
         icon: "/apps/notes.svg",
         canOpen: true,
@@ -368,6 +368,12 @@ const WORK_LOCATION = {
                         "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
                         "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
                     ],
+                    liveDemo:
+                        "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
+
+                    github:
+                        "https://github.com/rtome85/nike-ecommerce-website",
+
                 },
                 {
                     id: 2,
@@ -422,6 +428,12 @@ const WORK_LOCATION = {
                         "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
                         "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
                     ],
+                    liveDemo:
+                        "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
+
+                    github:
+                        "https://github.com/rtome85/ai-resume-analyzer",
+
                 },
                 {
                     id: 2,
@@ -476,6 +488,12 @@ const WORK_LOCATION = {
                         "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
                         "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
                     ],
+                    liveDemo:
+                        "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+
+                    github:
+                        "https://github.com/rtome85/food-delivery-app",
+
                 },
                 {
                     id: 2,
@@ -633,6 +651,7 @@ const WINDOW_CONFIG = {
     safariMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     contactMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     aboutMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    resumeMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

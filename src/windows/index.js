@@ -10,5 +10,6 @@ import FilesMobile from "./FilesMobile";
 import SafariMobile from "./SafariMobile";
 import ContactMobile from "./ContactMobile";
 import AboutMobile from "./AboutMobile";
+import ResumeMobile from "./ResumeMobile";
 
-export { Terminal, Safari, Resume, Finder, Text, Image, Contact, TerminalMobile, FilesMobile, SafariMobile, ContactMobile, AboutMobile }
+export { Terminal, Safari, Resume, Finder, Text, Image, Contact, TerminalMobile, FilesMobile, SafariMobile, ContactMobile, AboutMobile, ResumeMobile }
