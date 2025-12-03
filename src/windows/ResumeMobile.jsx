@@ -118,7 +118,7 @@ const ResumeMobile = () => {
 						{locations.work.children.map((location) => (
 							<li key={location.id}>
 								<h3 className="text-lg font-bold">{location.name}</h3>
-								<ul className="fle flex-col gap-2">
+								<ul className="flex flex-col gap-2">
 									{location.children.map((child) => (
 										<li key={child.id}>
 											{child.fileType === "txt" && <p>{child.description}</p>}
