@@ -20,13 +20,6 @@ const LanguageSettings = ({ goBack }) => {
 		return saved || "en";
 	});
 
-	useEffect(() => {
-		// Load saved language preference on mount
-		const saved = localStorage.getItem("language");
-		if (saved) {
-			setSelectedLanguage(saved);
-		}
-	}, []);
 
 	const handleSelect = (code) => {
 		setSelectedLanguage(code);
