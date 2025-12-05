@@ -61,13 +61,6 @@ const BatterySettings = ({ goBack }) => {
 							{energy}% ☕ Coffee-Powered
 						</p>
 					</div>
-					<div className="flex items-center justify-between">
-						<div className="flex items-center gap-3">
-							<Power className="w-6 h-6 text-red-400" />
-							<p className=" text-gray-900">Power Source</p>
-						</div>
-						<p className="text-sm font-semibold text-gray-900">Coffee Beans</p>
-					</div>
 				</div>
 			</div>
 

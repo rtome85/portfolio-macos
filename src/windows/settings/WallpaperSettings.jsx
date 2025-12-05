@@ -1,18 +1,24 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
+import useWallpaperStore from "#store/wallpaper";
 
 const wallpapers = [
-	{ id: 1, src: "/images/wallpaper.png", name: "Default" },
-	{ id: 2, src: "/images/wallpaper2.jpg", name: "Mountains" },
-	// Add more wallpapers as needed
+	{ id: 1, src: "/images/wallpaper2.jpg", name: "Default" },
+	{ id: 2, src: "/images/wallpaper.png", name: "Blue Sky" },
+	{ id: 3, src: "/images/wallpaper3.jpeg", name: "Forest" },
+	{ id: 4, src: "/images/wallpaper4.webp", name: "City" },
+	{ id: 5, src: "/images/wallpaper5.webp", name: "Beach" },
 ];
 
 const WallpaperSettings = ({ goBack }) => {
-	const [selected, setSelected] = useState(1);
+	// const [selected, setSelected] = useState(1);
+	const { selectedWallpaperId, setWallpaper, wallpapers } = useWallpaperStore();
+
+	console.log(selectedWallpaperId);
 
 	const handleSelect = (id) => {
-		setSelected(id);
-		// Optionally: save to localStorage or global state
+		// setSelected(id);
+		setWallpaper(id);
 	};
 
 	return (
@@ -27,7 +33,9 @@ const WallpaperSettings = ({ goBack }) => {
 					<div
 						key={wp.id}
 						className={`relative rounded-2xl overflow-hidden cursor-pointer border-4 ${
-							selected === wp.id ? "border-[#0278FA]" : "border-transparent"
+							selectedWallpaperId === wp.id
+								? "border-[#0278FA]"
+								: "border-transparent"
 						}`}
 						onClick={() => handleSelect(wp.id)}
 					>
@@ -36,12 +44,14 @@ const WallpaperSettings = ({ goBack }) => {
 							alt={wp.name}
 							className="w-full h-32 object-cover"
 						/>
-						{selected === wp.id && (
+						{selectedWallpaperId === wp.id && (
 							<div className="absolute bottom-2 right-2 bg-[#0278FA] rounded-full p-1">
 								<Check className="w-4 h-4 text-white" />
 							</div>
 						)}
-						<p className="text-center py-2 text-sm">{wp.name}</p>
+						<p className="text-center py-3 text-sm bg-gray-100 rounded-b-xl">
+							{wp.name}
+						</p>
 					</div>
 				))}
 			</div>
