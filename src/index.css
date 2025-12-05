@@ -467,6 +467,47 @@ body {
 		}
 	}
 
+	#settingsMobile {
+		@apply max-sm:w-dvw max-sm:h-dvh absolute max-sm:top-0 max-sm:left-0 bg-white;
+
+		.content {
+			@apply p-5 flex flex-col gap-4 overflow-y-auto pb-24 inset-0;
+			max-height: calc(100dvh - 100px);
+		}
+		h1 {
+			@apply text-3xl font-bold;
+		}
+		h2 {
+			@apply text-2xl font-semibold;
+		}
+		h3 {
+			@apply text-xl font-semibold;
+		}
+
+		.text-size-slider {
+			&::-webkit-slider-thumb {
+				appearance: none;
+				width: 28px;
+				height: 28px;
+				border-radius: 50%;
+				background: #0278fa;
+				cursor: pointer;
+				border: 2px solid white;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+			}
+
+			&::-moz-range-thumb {
+				width: 28px;
+				height: 28px;
+				border-radius: 50%;
+				background: #0278fa;
+				cursor: pointer;
+				border: 2px solid white;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+			}
+		}
+	}
+
 	#finder {
 		@apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
 
