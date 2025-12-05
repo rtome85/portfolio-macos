@@ -133,7 +133,7 @@ const homeMobileApps = [
         canOpen: true,
     },
     {
-        id: "settings",
+        id: "settingsMobile",
         name: "Settings",
         icon: "/apps/settings.svg",
         canOpen: true,
@@ -652,6 +652,7 @@ const WINDOW_CONFIG = {
     contactMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     aboutMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     resumeMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    settingsMobile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

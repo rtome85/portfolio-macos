@@ -19,7 +19,7 @@ const HomeMobile = () => {
 		if (app.id === "filesMobile") return openWindow("filesMobile");
 		if (app.id === "github")
 			return window.open("https://github.com/rtome85", "_blank");
-		if (app.id === "settings") return openWindow("settings");
+		if (app.id === "settingsMobile") return openWindow("settingsMobile");
 		if (app.id === "aboutMobile") return openWindow("aboutMobile");
 		if (app.id === "blog")
 			return window.open("https://robtome.com/blog", "_blank");
